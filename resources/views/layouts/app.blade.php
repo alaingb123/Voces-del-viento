@@ -19,24 +19,20 @@
     @livewireStyles
 </head>
 
-
+<body class="font-sans antialiased">
     <x-banner />
 
-    <body class="font-light antialiased">
-        @include('layouts.partials.header')
+    @include('layouts.partials.header')
 
+    @yield('hero')
 
+    <main class="container mx-auto px-5 flex flex-grow">
+        {{ $slot }}
+    </main>
 
-
-        <main class="container mx-auto px-5 flex flex-grow">
-   {{ $slot }}
-        </main>
-
-
-        @include('layouts.partials.footer')
+    @include('layouts.partials.footer')
 
     @stack('modals')
-
     @livewireScripts
 </body>
 
