@@ -22,7 +22,7 @@ class PostFactory extends Factory
             'title' => $this->faker->sentence(),
             'content' => $this->faker->paragraph(10),
             'slug' => $this->faker->slug(3),
-            'image' => $this->faker->imageUrl(),
+            'image' => 'http://localhost:8000/build/assets/axie-infinity.jpg',
             'published_at' => $this->faker->dateTimeBetween('-1 year', 'now'),
             'featured' => $this->faker->boolean(10),
 

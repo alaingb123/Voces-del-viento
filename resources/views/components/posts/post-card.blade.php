@@ -1,15 +1,15 @@
 @props(['post'])
 
 <div class="">
-    <a href="#">
+    <a href="{{ route('posts.show', $post )}}">
         <div>
             <img class="w-full rounded-xl" src="{{ $post->image }}">
         </div>
     </a>
     <div class="mt-3">
         <div class="flex items-center mb-2">
-            <a href="#" class="bg-red-600 
-        text-white 
+            <a href="#" class="bg-red-600
+        text-white
         rounded-xl px-3 py-1 text-sm mr-3">
                 Laravel
             </a>

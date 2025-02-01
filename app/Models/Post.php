@@ -36,7 +36,7 @@ class Post extends Model
         return Str::limit(strip_tags($this->content), 200);
     }
 
-    public function readingTime()
+    public function getReadingTime()
     {
        $mins = str_word_count($this->content) / 250;
 

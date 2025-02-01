@@ -1,6 +1,6 @@
 <x-app-layout :title="$post->title">
     <article class="w-full col-span-4 py-5 mx-auto mt-10 md:col-span-3" style="max-width:700px">
-        <img class="w-full my-2 rounded-lg" src="{{ $post->getThumbnailUrl() }}" alt="thumbnail">
+        <img class="w-full my-2 rounded-lg" src="{{ $post->image }}" alt="thumbnail">
         <h1 class="text-4xl font-bold text-left text-gray-800">
             {{ $post->title }}
         </h1>
@@ -22,7 +22,7 @@
         <div
             class="flex items-center justify-between px-2 py-4 my-6 text-sm border-t border-b border-gray-100 article-actions-bar">
             <div class="flex items-center">
-                <livewire:like-button :key="'like-' . $post->id" :$post />
+                {{-- <livewire:like-button :key="'like-' . $post->id" :$post /> --}}
             </div>
             <div>
                 <div class="flex items-center">
@@ -35,11 +35,11 @@
         </div>
 
         <div class="flex items-center mt-10 space-x-4">
-            @foreach ($post->categories as $category)
+            {{-- @foreach ($post->categories as $category)
                 <x-posts.category-badge :category="$category" />
-            @endforeach
+            @endforeach --}}
         </div>
 
-        <livewire:post-comments :key="'comments' . $post->id" :$post />
+        {{-- <livewire:post-comments :key="'comments' . $post->id" :$post /> --}}
     </article>
 </x-app-layout>

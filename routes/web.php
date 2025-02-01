@@ -5,7 +5,17 @@ use App\Http\Controllers\PostController;
 use Illuminate\Support\Facades\Route;
 
 
+
+Route::get('/posts/{post}', [PostController::class, 'show'])
+->name('posts.show');
+
+
 Route::get('/blog', [PostController::class, 'index'])->name('posts.index');
+
+
+
+
+
 Route::get('/', HomeController::class)->name(name: 'home');
 
 
